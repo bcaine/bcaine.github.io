@@ -27,4 +27,4 @@ I'm currently a senior at Northeastern University studying Computer Engineering 
 
 
 
-To learn a bit about all the places I've worked, you can check out my [resume](./files/resume.pdf). If [projects](../projects/) are more your thing, I have those too. 
+To learn a bit about all the places I've worked, you can check out my [resume](../files/resume.pdf). If [projects](../projects/) are more your thing, I have those too. 
