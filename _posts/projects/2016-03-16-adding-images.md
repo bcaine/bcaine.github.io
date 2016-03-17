@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Digits to Addition
+title: Adding Images
 modified:
 categories: [project]
-excerpt: "Training a CNN to RNN End-to-End"
+excerpt: "Adding a series of MNIST digits using a CNN-to-RNN trained end-to-end."
 tags: [Deep Learning, Machine Learning, Keras]
 image:
   feature:
