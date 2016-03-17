@@ -46,23 +46,28 @@ model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='rmsprop')
 ```
 
-The model parameters here are very arbitrary and suboptimal, which is fine for our purposes. The goal here is to test making time distributed convolutions and feeding these into a RNN, not to make the best number image summation tool. Something interesting to note is that using relu activations caused numeric instability, with the loss getting immediately stuck at infinity. Tanh did not have this problem.
+The goal here is to experiment with time distributed convolutions and feeding that into a RNN, not to make the best MNIST summation tool. As a result, the model parameters here are somewhat arbitrary and definitely suboptimal. Something interesting to note is that using relu activations caused numeric instability, with the loss getting immediately stuck at infinity. Tanh did not have this problem.
 
-The key is that each layer in Keras has a TimeDistributed Wrapper around it, which basically applies that step to all steps in the stack (so all images). This continues to happen until our TimeDistributed(Flatten()) which essentially flattens all the features out into a big matrix, and is fed into our RNN with GRU units.
+The key is that each layer in Keras has a TimeDistributed Wrapper around it, which basically applies that operation (in this case Convolution2D or Flatten) to all steps in the stack (so all images). This continues to happen until our TimeDistributed(Flatten()) which essentially flattens all the features out into a big matrix, and is fed into our RNN with GRU units.
 
 Overall, the model works pretty well. With our max_to_add being set to 4, after 20 epochs our MSE on an evaluation set is 0.61, which is fairly small considering it is adding up to four digits from 0-9, meaning the result could be anywhere from 0 to 36.
 
 ![training](../../project_images/train_mnist.png)
 
-### Visualizing the Process ###
+### Visualizing Layer 1 ###
 
-The first layer consists of 8 4x4 weight matricies that are convolved with the image. What I really wanted to see is whether our convolution layers in our CNN->RNN model learn similar feature extractors to a similar model that uses softmax to predict a MNIST digit's value. 
+The first layer consists of 8 4x4 weight matricies that are convolved with the image. What I really wanted to see is whether our convolution layers in our CNN->RNN model learn similar feature extractors to a similar model that uses softmax to predict a MNIST digit's value.
 
-__Pure__
+__Simple CNN__
 ![weight1](../../project_images/mnist_cnn_w1.png)
 
 __CNN-RNN__
 ![weight1](../../project_images/mnist_rcnn_w1.png)
+
+### Further Work ###
+An interesting follow on I have also played with is switching out the operation the RNN has to model. So for example changing addition to multiplication, and seeing how it responds. Initial tests seem to show that it takes much, much longer to converge to a decent loss, and seems to have trouble with large results (it can get 1x9 every time, but never gets 9x9). I want to explore model complexity and alternative loss functions to tease out what is causing the limitations there.
+
+
 
 
 
