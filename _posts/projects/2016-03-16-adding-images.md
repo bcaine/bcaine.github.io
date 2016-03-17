@@ -21,7 +21,7 @@ For a given sequence of images like the following:
 
 ![mnist5](../../project_images/mnist5.png) ![mnist0](../../project_images/mnist0.png) ![mnist4](../../project_images/mnist4.png) ![mnist1](../../project_images/mnist1.png)
 
-we want to train a neural network to calculate the sum, which in this case is **10** (I can add!).
+We want to train a neural network to calculate the sum, which in this case is **10** (I can add!).
 
 ### Model Creation ###
 To create our model, I used [Keras](http://keras.io/), which is a very easy to use neural network library that runs on top of either Theano or Tensorflow. In particular, I use the [Time Distributed Branch](https://github.com/fchollet/keras/tree/timedistributed) which is still under development, but I found stable enough to use.
