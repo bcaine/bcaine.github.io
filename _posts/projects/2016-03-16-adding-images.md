@@ -12,12 +12,9 @@ date: 2016-03-16T20:43:28-04:00
 
 Training neural networks with both convolutional and recurrent layers end-to-end provides a nice framework to model many problems. Inputting a series of images, learning features, modeling temporal patterns, and outputting a vector (or value) at every timestep has a ton of interesting applications.
 
-
 My main (longer term) motivation is exploring this is a larger project working towards automatic video summarization, using neural nets to extract scene information and figure out the frame-by-frame importance.
 
-
 Anyway, as a starting point, I wanted to try a bunch of smaller models that allowed this type of end-to-end optimization. One very easy one to both understand and train is passing in a series of 1..N MNIST digits and calculating the sum of all the digit values added up.
-
 
 ### Input ###
 For a given sequence of images like the following:
@@ -30,6 +27,7 @@ we want to train a neural network to calculate the sum, which in this case is **
 To create our model, I used [Keras](http://keras.io/), which is a very easy to use neural network library that runs on top of either Theano or Tensorflow. In particular, I use the [Time Distributed Branch](https://github.com/fchollet/keras/tree/timedistributed) which is still under development, but I found stable enough to use.
 
 Here's our model:
+
 
 ```python
 model = Sequential()
