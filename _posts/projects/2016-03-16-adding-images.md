@@ -12,7 +12,9 @@ date: 2016-03-16T20:43:28-04:00
 
 Training neural networks with both convolutional and recurrent layers end-to-end provides a nice framework to model many problems. Inputting a series of images, learning features, modeling temporal patterns, and outputting a vector (or value) at every timestep has a ton of interesting applications.
 
+
 My main (longer term) motivation is exploring this is a larger project working towards automatic video summarization, using neural nets to extract scene information and figure out the frame-by-frame importance.
+
 
 Anyway, as a starting point, I wanted to try a bunch of smaller models that allowed this type of end-to-end optimization. One very easy one to both understand and train is passing in a series of 1..N MNIST digits and calculating the sum of all the digit values added up.
 
