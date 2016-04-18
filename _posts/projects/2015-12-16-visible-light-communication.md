@@ -12,7 +12,7 @@ Essentially, we made a simplex (one direction) [LiFi](https://en.wikipedia.org/w
 
 #### The Team ####
 
-* [Ryan](https://www.linkedin.com/in/ryan-nutile-812814100) - Handled the embedded (read assembly) codebase that modulated the transmitter circuit and handled the incoming signals fromt he receiver circuit.
+* [Ryan](https://www.linkedin.com/in/ryan-nutile-812814100) - Handled the embedded (read: Assembly) codebase that modulated the transmitter circuit and handled the incoming signals from the receiver circuit.
 * [Matt](https://www.linkedin.com/in/matt-schroer-707b7654) - Wrote the Desktop GUI to receive and transmit data over USB to our embedded device.
 * [Kyle](https://www.linkedin.com/in/kylebradleyece) - Designed and built our transmitter circuit. Designed our PCBs. 
 * [James](https://www.linkedin.com/in/james-croci-b463b971) - Designed and built our receiver circuit, including filtering, amplification, converting back to square wave. 
