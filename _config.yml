@@ -37,6 +37,8 @@ page_layout: page
 # Format titles with titlecase?
 titlecase: true
 
+future: true
+
 
 # Site owner
 owner:
