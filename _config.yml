@@ -44,7 +44,7 @@ future: true
 owner:
   name: Ben Caine
   avatar: bio-photo.jpg
-  bio: "Northeastern Student, Data Scientist, Software Engineer, Redsox Fan."
+  bio: "Data Scientist, Software Engineer, Redsox Fan."
   email: bcaine0@gmail.com
   disqus-shortname:
   twitter: #username
